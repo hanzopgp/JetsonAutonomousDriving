@@ -2,7 +2,6 @@
 
 https://towardsdatascience.com/deeppicar-part-1-102e03c83f2c
 
-
 ---> NVIDIA Jetson Nano :
 
 Tutorial card installation :
@@ -16,4 +15,7 @@ https://www.youtube.com/watch?v=CRpW9wrRKx4&ab_channel=Murtaza%27sWorkshop-Robot
 ---> Video processing :
 
 
+
 ---> Deep learning models :
+
+

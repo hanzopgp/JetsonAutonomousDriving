@@ -1,0 +1,2 @@
+- VSCode ARM 64
+- Terminal
