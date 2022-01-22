@@ -21,4 +21,4 @@
 -> On Jetson Nano Card OS :
 - VSCode ARM 64
 - Terminal
-- Python/CV2
+- Python/CV2/Numpy
