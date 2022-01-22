@@ -12,7 +12,7 @@ https://developer.nvidia.com/embedded/jetson-nano-developer-kit
 Video about Jetson Nano applications :
 https://www.youtube.com/watch?v=CRpW9wrRKx4&ab_channel=Murtaza%27sWorkshop-RoboticsandAI
 
----> Video processing :
+---> Video/Image processing :
 
 
 

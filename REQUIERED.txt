@@ -1,14 +1,24 @@
 ---> Hardware :
 
-- NVIDIA Jetson Nano Card
+-> In general :
 - RasberryPi
+- Robot-car
+
+-> For computer vision :
+- NVIDIA Jetson Nano Card
 - SD Card 32GB minimum
 - Mouse & Keyboard
-- Robot-car
 - Wi-fi USB
+- Camera
 
----> Software :
+---> Software 
 
+-> On main computer :
 - Jetson Nano developer kit
 - Etcher
 - SD Card formatter
+
+-> On Jetson Nano Card OS :
+- VSCode ARM 64
+- Terminal
+- Python/CV2
