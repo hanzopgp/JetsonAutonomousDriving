@@ -1,16 +1,12 @@
 ---> General :
 
 https://towardsdatascience.com/deeppicar-part-1-102e03c83f2c
+https://www.youtube.com/watch?v=5INy0FvaWLw&ab_channel=PaulMcWhorter
+https://www.youtube.com/watch?v=CRpW9wrRKx4&ab_channel=Murtaza%27sWorkshop-RoboticsandAI
 
 ---> NVIDIA Jetson Nano :
 
-Tutorial card installation :
 https://developer.nvidia.com/embedded/jetson-nano-developer-kit
-
----> Electronics :
-
-Video about Jetson Nano applications :
-https://www.youtube.com/watch?v=CRpW9wrRKx4&ab_channel=Murtaza%27sWorkshop-RoboticsandAI
 
 ---> Video/Image processing :
 
