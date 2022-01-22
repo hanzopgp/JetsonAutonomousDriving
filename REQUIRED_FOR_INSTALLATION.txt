@@ -4,7 +4,9 @@
 - RasberryPi
 - SD Card 32GB minimum
 - Computer
+- Mouse & Keyboard
 - Robot-car
+- Wi-fi USB
 
 ---> Software :
 
