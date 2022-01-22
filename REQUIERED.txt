@@ -1,0 +1,13 @@
+---> Hardware :
+
+- NVIDIA Jetson Nano Card
+- RasberryPi
+- SD Card 32GB minimum
+- Computer
+- Robot-car
+
+---> Software :
+
+- Jetson Nano developer kit
+- Etcher
+- SD Card formatter
