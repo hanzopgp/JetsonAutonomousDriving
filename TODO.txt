@@ -20,6 +20,6 @@
   - Build classification model
   - Train, fine-tune, evaluate
   - Link actuators module and model
-  - 
+
 - Bonus :
   - Try reinforcement learning
