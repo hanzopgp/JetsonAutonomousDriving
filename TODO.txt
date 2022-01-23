@@ -1,6 +1,7 @@
-- Build robot-car
-- Setup RasberryPi and Jetson Nano
-- Code wireless control
+- Setup Jetson Nano card
+- Video/Image processing on Jetson Nano card
+- Setup RasberryPi with Jetson Nano card and the robot-car
+- Develop a software to control the robot-car
 - Code image/video processing module
 
 - Code video + steering angle getter
