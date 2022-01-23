@@ -10,15 +10,27 @@ All the requirements and references are written at the root of the repository.
 
 ## Steps :
 
-- Setup Jetson nano card
+- Setup Jetson Nano card
 - Video/Image processing on Jetson Nano card
-- Setup RasberryPi with Jetson nano card and the robot-car
+- Setup RasberryPi with Jetson Nano card and the robot-car
 - Develop a software to control the robot-car
-- Develop a software which control the robot-car thanks to computer vision
-- Develop a deep learning model which control the robot-car
-- Optimize model and add features such as STOP signs
-- Try reinforcement learning 
+- Code image/video processing module
 
+- Code video + steering angle getter
+- Code data augmentation
+- Code data preprocessing
+- Build deep learning model
+- Train, fine-tune, evaluate
+- Link actuators module and model
+
+- Build traffic signs, pedestrian etc...
+- Take pictures
+- Label pictures with labelimg
+- Build classification model
+- Train, fine-tune, evaluate
+- Link actuators module and model
+
+- Try reinforcement learning
 
 
 
