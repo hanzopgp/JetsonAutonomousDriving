@@ -29,8 +29,8 @@ All the requirements and references are written at the root of the repository.
 - Build classification model
 - Train, fine-tune, evaluate
 - Link actuators module and model
-
-- Try reinforcement learning
+- Bonus :
+  - Try reinforcement learning
 
 
 
