@@ -1,5 +1,0 @@
----> Folders :
-
-- Computer Vision module (Detectors/Position/LedControl...)
-- Actuators module
-- Main folder linking previous folders
