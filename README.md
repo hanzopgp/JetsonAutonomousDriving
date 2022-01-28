@@ -3,7 +3,7 @@
 <pre><code>
 JetsonAutonomousDriving/
       ├── src/                         (Folder containing whole project source code)
-      ├── assets/ 	                   (Addtional assets needed for the projects such as jetson sdk image)   
+      ├── assets/ 	               (Addtional assets needed for the projects such as jetson sdk image)   
       ├── txt/                   
       |          ├── weekly_report/    (contains overleaf link of the report / todolist / references / setup etc...)
       |          └── report/           (final university report folder)
