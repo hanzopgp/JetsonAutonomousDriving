@@ -5,7 +5,7 @@ JetsonAutonomousDriving/
       ├── src/                   (Folder containing whole project source code)
       ├── assets/ 	         (additional assets needed for the projects such as jetson SDK)   
       ├── txt/                   
-      |    ├── weekly_report/    (contains overleaf link of the report / todolist / references / setup etc...)
+      |    ├── weekly_report/    (contains overleaf link of the todolist / references / setup etc...)
       |    └── report/           (final university report folder)
       ├── README.md		          
       └── LICENSE  
