@@ -4,9 +4,6 @@
 
 1. [Presentation](#presentation)
 2. [Project architecture](#project-architecture)
-3. [How to install](#how-to-install)
-4. [Features](#Features)
-5. [Links](#links)
 
 ## Presentation :
 
