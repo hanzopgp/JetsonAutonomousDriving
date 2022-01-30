@@ -15,11 +15,13 @@ Weekly report : https://fr.overleaf.com/project/61f3ec98ecde9c67e26d5388
 
 <pre><code>
 JetsonAutonomousDriving/
-      ├── src/                   (Folder containing whole project source code)
-      ├── assets/ 	         (additional assets needed for the projects such as jetson SDK)   
+      ├── src/                   
+      |    ├── tutorial/         (Folder containing whole project source code)
+      |    └── main/             (Folder containing PyTorch/CNN tutorials)
+      ├── assets/ 	         (Additional assets needed for the projects such as Jetson SDK)   
       ├── txt/                   
-      |    ├── weekly_report/    (contains overleaf link of the todolist / references / setup etc...)
-      |    └── report/           (final university report folder)
+      |    ├── subject.pdf       (Original subject (in french))
+      |    └── todo.txt          (Project todolist)
       ├── README.md		          
       └── LICENSE  
 </pre></code>
