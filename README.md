@@ -19,6 +19,8 @@ JetsonAutonomousDriving/
       |    ├── tutorial/                (Folder containing CNN/PyTorch tutorials)
       |    └── main/              
       |         ├── model_benchmark/    (Benchmarks of different CNN on Jetson card) 
+      |         |    ├── models         (Folder containing .pth files for each model tested)
+      |         |    └── results.txt    (File containing some results and a link to google sheets)
       |         └── model/              (Best model for our project)
       ├── txt/                   
       |    ├── subject.pdf              (Original subject (in french))
