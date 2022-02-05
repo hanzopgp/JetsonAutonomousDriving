@@ -1,4 +1,5 @@
 assets/
 DeepnInternshipReport/
 data/
+*.pth
 
