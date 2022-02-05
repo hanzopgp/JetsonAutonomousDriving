@@ -18,8 +18,8 @@ JetsonAutonomousDriving/
       ├── src/                   
       |    ├── tutorial/                (Folder containing CNN/PyTorch tutorials)
       |    └── main/              
-      |           ├── model_benchmark/  (Benchmarks of different CNN on Jetson card) 
-      |		└── model/              (Best model for our project)
+      |         ├── model_benchmark/    (Benchmarks of different CNN on Jetson card) 
+      |         └── model/              (Best model for our project)
       ├── txt/                   
       |    ├── subject.pdf              (Original subject (in french))
       |    └── todo.txt                 (Project todolist)
