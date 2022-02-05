@@ -1,9 +1,17 @@
 https://docs.google.com/spreadsheets/d/1jBV-jk9vk1swUBzQjy9R5V_CnIb7EX-_Wii6pIYA0gk/edit?usp=sharing
 
-RESNET COMPUTER
+ALEXNET COMPUTER
 FPS: 20  --> seconds: 0.1459805965423584
 FPS: 40  --> seconds: 0.24341607093811035
 FPS: 60  --> seconds: 0.3334972858428955
 FPS: 80  --> seconds: 0.5024583339691162
 FPS: 100  --> seconds: 0.6131000518798828
 FPS: 120  --> seconds: 0.734074592590332
+
+RESNET COMPUTER
+FPS: 20  --> seconds: 0.4250493049621582
+FPS: 40  --> seconds: 0.8882513046264648
+FPS: 60  --> seconds: 1.3497040271759033
+FPS: 80  --> seconds: 1.774982213973999
+FPS: 100  --> seconds: 2.301089286804199
+FPS: 120  --> seconds: 2.6839911937713623

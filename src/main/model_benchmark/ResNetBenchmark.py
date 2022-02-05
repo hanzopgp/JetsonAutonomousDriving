@@ -45,8 +45,8 @@ X_test, Y_test = get_test_data(resnet_testloader, 1000)
 
 PATH = "models/"
 model = models.resnet18(pretrained=True)
-resnet.fc = nn.Linear(512, 10)
-model.load_state_dict(torch.load(os.path.join(PATH,"resnet.pth")))
+model.fc = nn.Linear(512, 10)
+model.load_state_dict(torch.load(os.path.join(PATH,"resnet.pth"),map_location='cpu'))
 model.eval()
 
 for t in (20,40,60,80,100,120):
