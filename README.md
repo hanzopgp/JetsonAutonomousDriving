@@ -16,14 +16,14 @@ Weekly report : https://fr.overleaf.com/project/61f3ec98ecde9c67e26d5388
 <pre><code>
 JetsonAutonomousDriving/
       ├── src/                   
-      |    ├── tutorial/              (Folder containing CNN/PyTorch tutorials)
+      |    ├── tutorial/                (Folder containing CNN/PyTorch tutorials)
       |    └── main/              
-      |			├── model_benchmark/  (Benchmarks of different CNN on Jetson card) 
-      |			└── model/            (Best model for our project)
+      |           ├── model_benchmark/  (Benchmarks of different CNN on Jetson card) 
+      |		└── model/            (Best model for our project)
       ├── txt/                   
-      |    ├── subject.pdf            (Original subject (in french))
-      |    └── todo.txt               (Project todolist)
-      ├── assets/ 	                  (Additional assets needed for the projects such as Jetson SDK) 
+      |    ├── subject.pdf              (Original subject (in french))
+      |    └── todo.txt                 (Project todolist)
+      ├── assets/ 	                (Additional assets needed for the projects such as Jetson SDK) 
       ├── README.md		          
       └── LICENSE  
 </pre></code>
