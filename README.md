@@ -16,10 +16,10 @@ Weekly report : https://fr.overleaf.com/project/61f3ec98ecde9c67e26d5388
 <pre><code>
 JetsonAutonomousDriving/
       ├── src/                   
-      |    ├── tutorial/              (Folder containing CNN/PyTorch tutorials)
+      |    ├── tutorial/                (Folder containing CNN/PyTorch tutorials)
       |    └── main/              
       |           ├── model_benchmark/  (Benchmarks of different CNN on Jetson card) 
-      |		└── model/            (Best model for our project)
+      |		└── model/              (Best model for our project)
       ├── txt/                   
       |    ├── subject.pdf              (Original subject (in french))
       |    └── todo.txt                 (Project todolist)
