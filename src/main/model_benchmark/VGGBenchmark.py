@@ -45,10 +45,10 @@ X_test, Y_test = get_test_data(vgg_testloader, 1000)
 
 PATH = "models/"
 model = models.vgg16(pretrained=True)
-vgg.classifier[0] = nn.Linear(25088, 8192)
-vgg.classifier[3] = nn.Linear(8192, 1024)
-vgg.classifier[6] = nn.Linear(1024, 10)
-model.load_state_dict(torch.load(os.path.join(PATH,"vgg.pth")))
+model.classifier[0] = nn.Linear(25088, 8192)
+model.classifier[3] = nn.Linear(8192, 1024)
+model.classifier[6] = nn.Linear(1024, 10)
+model.load_state_dict(torch.load(os.path.join(PATH,"vgg.pth"),map_location='cpu'))
 model.eval()
 
 for t in (20,40,60,80,100,120):
