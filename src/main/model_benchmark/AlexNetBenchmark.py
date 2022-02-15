@@ -4,6 +4,10 @@ from torchvision import models, transforms
 import torchvision
 import os
 from time import time
+import onnx
+import onnxruntime
+from onnx import numpy_helper
+import numpy as np
 
 def get_test_data(dataloader, size):
     X_test, Y_test = next(iter(dataloader))
@@ -50,8 +54,34 @@ model.classifier[4] = nn.Linear(2048, 1024)
 model.classifier[6] = nn.Linear(1024, 10)
 model.load_state_dict(torch.load(os.path.join(PATH,"alexnet.pth")))
 model.eval()
+# for t in (20,40,60,80,100,120):
+#     t0 = time()
+#     model(X_test[:t])
+#     print("FPS:", t, " --> seconds:", (time() - t0))
 
-for t in (20,40,60,80,100,120):
-    t0 = time()
-    model(X_test[:t])
-    print("FPS:", t, " --> seconds:", (time() - t0))
+test_size = 100
+dummy_input = torch.randn(test_size, 3, input_size, input_size)  
+torch.onnx.export(model,   
+                  dummy_input, 
+                  str(PATH+"alexnet.onnx"),
+                  export_params=True,
+                  do_constant_folding=True, 
+                  input_names = ['modelInput'],
+                  output_names = ['modelOutput'])
+
+
+
+X_test = X_test[:test_size]
+
+t0 = time()
+pred = model(X_test)
+print("Time for ",test_size," images without ONNX inference", (time() - t0))
+print(pred.shape)
+
+sess = onnxruntime.InferenceSession(str(PATH+"alexnet.onnx"))
+input_name = sess.get_inputs()[0].name
+output_name = sess.get_outputs()[0].name
+t0 = time()
+pred = sess.run([output_name], {input_name: np.array(X_test).astype(np.float32)})[0]
+print("Time for ",test_size," images with ONNX inference", (time() - t0))
+print(pred.shape)
