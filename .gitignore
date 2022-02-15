@@ -2,4 +2,5 @@ assets/
 DeepnInternshipReport/
 data/
 *.pth
+*.onnx
 
