@@ -27,6 +27,7 @@ JetsonAutonomousDriving/
       |    |     |    └── results.txt    (File containing some results and a link to google sheets)
       |    |     ├── model/              (Final model for our project)
       |    |     ├── segmentation/       (Segmentation experimentations)
+      |    |     ├── data_acquisition/   (Getting some video data from the robot-car)
       |    |     └── hand_gesture_model/ (Hand gesture experimentations) 
       |    └── robot/                    (Folder containing the robot-car scripts)
       ├── txt/                   
