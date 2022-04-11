@@ -19,14 +19,19 @@ Weekly report : https://www.overleaf.com/read/rnhmbsmgdsfd
 JetsonAutonomousDriving/
       ├── src/                   
       |    ├── tutorial/                (Folder containing CNN/PyTorch tutorials)
-      |    └── main/              
-      |         ├── model_benchmark/    (Benchmarks of different CNN on Jetson card) 
-      |         |    ├── models/        (Folder containing .pth files for each model tested)
-      |         |    └── results.txt    (File containing some results and a link to google sheets)
-      |         └── model/              (Best model for our project)
+      |    |    ├── cnn_pytorch_tutorial/
+      |    |    └── kaggle_cnn_pytorch_tutorial/                 
+      |    ├─── main/              
+      |    |     ├── model_benchmark/    (Benchmarks of different CNN on Jetson card) 
+      |    |     |    ├── models/        (Folder containing .pth files for each model tested)
+      |    |     |    └── results.txt    (File containing some results and a link to google sheets)
+      |    |     ├── model/              (Final model for our project)
+      |    |     ├── segmentation/       (Segmentation experimentations)
+      |    |     └── hand_gesture_model/ (Hand gesture experimentations) 
+      |    └── robot/                    (Folder containing the robot-car scripts)
       ├── txt/                   
       |    ├── subject.pdf              (Original subject (in french))
-      |    └── todo.txt                 (Project todolist)
+      |    └── todo.txt            
       ├── assets/ 	                (Additional assets needed for the projects such as Jetson SDK) 
       ├── README.md		          
       └── LICENSE  
