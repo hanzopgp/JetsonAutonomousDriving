@@ -3,4 +3,5 @@ DeepnInternshipReport/
 data/
 *.pth
 *.onnx
+*jpg
 
