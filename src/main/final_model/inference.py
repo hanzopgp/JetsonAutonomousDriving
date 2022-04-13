@@ -5,7 +5,7 @@ import os
 
 import torch
 from torch import nn
-from torchvision import models
+from torchvision import models, transforms
 from torch.nn.functional import softmax
 
 
@@ -13,6 +13,8 @@ LABELS = ['FINGER', 'FIST', 'LEFT', 'PALM', 'RIGHT']
 INPUT_SIZE = 224
 N_CLASS = 5
 model_path = "vgg.pth"
+mean=[0.485, 0.456, 0.406]
+std=[0.229, 0.224, 0.225]
 
 model = models.vgg16(pretrained=True)
 model.classifier[0] = nn.Linear(25088, 8192)
@@ -30,15 +32,25 @@ while True:
 	cv2.imshow('frame', frame)
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
-	# img = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 	img = cv2.resize(frame, (INPUT_SIZE, INPUT_SIZE))
 	img = img.reshape(1, 3, INPUT_SIZE, INPUT_SIZE)
 	img = torch.tensor(img).float()
+
+	# transformInference=transforms.Compose([
+	# 	transforms.ToPILImage(),
+    #     transforms.CenterCrop(INPUT_SIZE),
+	# 	transforms.Normalize(mean, std),
+	# 	transforms.ToTensor()
+    # ])
+
+	# img = transformInference(img)
+	
+
 	# print(img.shape)
 	# after = int(time.time() - before)
 	with torch.no_grad():
-		print(softmax(model(img)), end='\r')
-		# print(LABELS[np.argmax(softmax(model(img)))], end='\r')
+		# print(softmax(model(img)), end='\r')
+		print(LABELS[np.argmax(softmax(model(img)))], end='\r')
 
 vid.release()
 cv2.destroyAllWindows()
