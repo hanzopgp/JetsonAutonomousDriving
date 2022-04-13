@@ -4,4 +4,4 @@ data/
 *.pth
 *.onnx
 *jpg
-
+*.zip
