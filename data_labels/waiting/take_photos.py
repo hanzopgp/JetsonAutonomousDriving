@@ -2,7 +2,7 @@ import cv2
 import os
 
 IMG_FOLDER = "images"
-NUM_EACH_POSE = 20
+NUM_EACH_POSE = 40
 RESOLUTION = (224, 224)
 
 POSES = [
@@ -63,7 +63,7 @@ if __name__ == '__main__':
 	
 	# Check if camera is working
 	cv2.namedWindow("preview")
-	vc = cv2.VideoCapture(0)
+	vc = cv2.VideoCapture(1)
 	if vc.isOpened():
 		camera_loop(vc)
 	else:
