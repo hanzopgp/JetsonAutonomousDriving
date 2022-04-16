@@ -18,7 +18,8 @@ N_CLASS = 5
 # model_path = "models/vgg_sigmoid.pth" # big model, medium data augmentation, sigmoid activation
 # model_path = "models/vggsmall_softmax.pth" # medium model, medium data augmentation, softmax activation
 # model_path = "models/vggsmall_logsoftmax.pth" # medium model, small data augmentation, logsoftmax activation
-model_path = "models/last_vgg.pth"
+# model_path = "models/last_vgg.pth"
+model_path = "models/vgg_sig_new.pth" # first model working !!!!!!
 
 # training whole vgg classifier + latest feature layers :
 
@@ -48,7 +49,7 @@ model.eval()
 
 cv2.destroyAllWindows()
 # before = time.time()
-vid = cv2.VideoCapture(0)
+vid = cv2.VideoCapture(1)
 while True:
 
 	ret, frame = vid.read()
@@ -64,18 +65,20 @@ while True:
         # transforms.CenterCrop(INPUT_SIZE),
 		transforms.Resize(size=(INPUT_SIZE, INPUT_SIZE)),
 		transforms.ToTensor(),
-		transforms.Normalize(mean, std),
+		# transforms.Normalize(mean, std),
     ])
 
 	img = transformInference(frame)
 	img = img.unsqueeze(0)
+
+	# print(img)
 
 	# print(img.shape)
 	# after = int(time.time() - before)
 	with torch.no_grad():
 		# print(softmax(model(img)), end='\r')
 		# print(LABELS[np.argmax(softmax(model(img)))], end='\r')
-		print(np.where(model(img).numpy() > 0.1, 1, 0))
+		print(np.where(model(img).numpy() > 0.8, 1, 0))
 		# print(model(img).numpy())
 vid.release()
 cv2.destroyAllWindows()

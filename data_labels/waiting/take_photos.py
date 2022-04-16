@@ -2,7 +2,7 @@ import cv2
 import os
 
 IMG_FOLDER = "images"
-NUM_EACH_POSE = 40
+NUM_EACH_POSE = 100
 RESOLUTION = (224, 224)
 
 POSES = [
