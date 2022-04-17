@@ -1,3 +1,8 @@
+first test of one for all : ciphar
+test for bounding box caltech101
+
+==================================================================================================
+
 => val_accuracy : 0.66 
 => valid_loss: 1.21
 
@@ -46,13 +51,26 @@ try to add none class + softmax ?
 
 ===================================================================================================================
 
-No results, going for bounding box + only classif
+results not good enough, going for bounding box + only classif
 
 First only classif : took new images easier to classify (close to webcam)
-=> got instant huge results and big accuracy
-- more accuracy every time I add data
+=> got instant huge results and big accuracy (0.96%)
 => need to take some more data to get best performance
 
 Now we have to train a bouding box model which will crop the image and send it to the only classif model
 => gotta take some data thanks to a script + format it with csv file
 => use vgg again but with a different network which does 4 regression thansk to MSE+sigmoid
+
+thinking about downscaling images and going for 100x100 instead of 224x224 for the classification model
+indeed the bouding box model will give us small images and we want to avoid upscaling those
+we will see if we lose valid_accuracy when using 100x100 images
+
+224*224 96%
+128*128 90%
+100x100 91%
+64*64   67%
+
+idea : combine one for all model + the boudingbox-classification model for inference
+
+what range to chose for bounding box model ? 50x50 to 400x400 images ?
+
