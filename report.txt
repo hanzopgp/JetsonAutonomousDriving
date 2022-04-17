@@ -73,4 +73,14 @@ we will see if we lose valid_accuracy when using 100x100 images
 idea : combine one for all model + the boudingbox-classification model for inference
 
 what range to chose for bounding box model ? 50x50 to 400x400 images ?
+bouding box model working 
+starting with 128 neurons first layer
+==> first try : Best val loss: 0.000147
+getting more data
+==> Best val loss: 0.002289, bit worst because i've added some unknown data in validation set
 
+trying with some more complex network:
+256 neurons first layer :
+==> Best val loss: 
+512 neurons first layer :
+==> Best val loss: 
