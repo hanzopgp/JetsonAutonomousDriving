@@ -1,0 +1,45 @@
+=> val_accuracy : 0.66 
+=> valid_loss: 1.21
+
+vgg.classifier = nn.Sequential(nn.Linear(25088, 256), 
+                               nn.ReLU(), 
+                               nn.Dropout(0.5),
+                               nn.Linear(256, 100),
+                               nn.ReLU(), 
+                               nn.Dropout(0.5),
+                               nn.Linear(100, N_CLASS),                   
+                               nn.Sigmoid())
+
+-> lr = 3e-4
+-> no normalisation
+-> dataset version : 4
+
+transforms.ColorJitter(brightness=0.3, hue=0.3),
+            transforms.GaussianBlur(kernel_size=(5, 9), sigma=(0.01, 1.5)),
+            transforms.RandomRotation(degrees=(-20, 20)),
+            transforms.RandomPerspective(distortion_scale=0.2, p=0.2),
+            transforms.RandomAffine(degrees=(0, 10), translate=(0, 0.18), scale=(0.8, 1)),
+
+==================================================================================================
+
+maybe delete some of the dataset ?
+try less data augmentation and add it one by one ?
+test f1 score to see if some classes are not working ?
+
+no data augmentation --> too much overfit
+no dropout --> too much overfit
+
+test data augmentation:
+color jitter : OK
+gaussian blur : BOF
+dropout 0.6 : OK
+rotation : BOF
+distorsion : OK
+dropout 0.7 : OK
+
+need to check which image of the validation set is not working :
+=> seems like there is no class which is worse classified than another
+=> after watching the prediction the problem seems to be the distance indeed the classifier works really well when i'm close to the webcam, but when i'm far away it doesnt work anymore
+
+try to unfreeze last CNN layers ?
+try to add none class + softmax ?
