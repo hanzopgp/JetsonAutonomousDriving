@@ -50,6 +50,9 @@ No results, going for bounding box + only classif
 
 First only classif : took new images easier to classify (close to webcam)
 => got instant huge results and big accuracy
+- more accuracy every time I add data
 => need to take some more data to get best performance
 
 Now we have to train a bouding box model which will crop the image and send it to the only classif model
+=> gotta take some data thanks to a script + format it with csv file
+=> use vgg again but with a different network which does 4 regression thansk to MSE+sigmoid

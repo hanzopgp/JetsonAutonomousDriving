@@ -2,6 +2,7 @@ assets/
 DeepnInternshipReport/
 data/
 *.pth
+*.h5
 *.onnx
 *jpg
 *.zip
