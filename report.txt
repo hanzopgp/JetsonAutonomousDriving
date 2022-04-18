@@ -78,9 +78,15 @@ starting with 128 neurons first layer
 ==> first try : Best val loss: 0.000147
 getting more data
 ==> Best val loss: 0.002289, bit worst because i've added some unknown data in validation set
+testing with dropout and more patience in early stopping
+==> Best val loss: 
 
 trying with some more complex network:
 256 neurons first layer :
-==> Best val loss: 
+==> Best val loss: 0.000497
 512 neurons first layer :
-==> Best val loss: 
+==> Best val loss: 0.000805
+
+gotta try 256 with dropout maybe and more optimization but before lets take some more data
+
+==> Best val loss: 0.000497
