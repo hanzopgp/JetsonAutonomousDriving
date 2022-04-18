@@ -1,31 +1,5 @@
 first test of one for all : ciphar
-test for bounding box caltech101
-
-==================================================================================================
-
-=> val_accuracy : 0.66 
-=> valid_loss: 1.21
-
-vgg.classifier = nn.Sequential(nn.Linear(25088, 256), 
-                               nn.ReLU(), 
-                               nn.Dropout(0.5),
-                               nn.Linear(256, 100),
-                               nn.ReLU(), 
-                               nn.Dropout(0.5),
-                               nn.Linear(100, N_CLASS),                   
-                               nn.Sigmoid())
-
--> lr = 3e-4
--> no normalisation
--> dataset version : 4
-
-transforms.ColorJitter(brightness=0.3, hue=0.3),
-            transforms.GaussianBlur(kernel_size=(5, 9), sigma=(0.01, 1.5)),
-            transforms.RandomRotation(degrees=(-20, 20)),
-            transforms.RandomPerspective(distortion_scale=0.2, p=0.2),
-            transforms.RandomAffine(degrees=(0, 10), translate=(0, 0.18), scale=(0.8, 1)),
-
-==================================================================================================
+test for bounding box : caltech101
 
 maybe delete some of the dataset ?
 try less data augmentation and add it one by one ?
@@ -101,9 +75,10 @@ try to full overfit with a big model size, no dropout, no data augmentation
 we got better performance thanks to the 700 image with only little bbox i've taken
 
 Lets try with some data augmentation:
-==> Best val loss : 
+==> Best val loss : 0.000215
+Bad idea we desactivate it
 
-I want to try and even more complex model since it doesn't seem to overfit yet compared to training set (4096 neurons from dam GPU)
+I want to try and even more complex model since it doesn't seem to overfit yet compared to training set (4096)
 ==> Best val loss : 
 
 now we try to regularize using dropout, less complex model, data augmentation, and adding even more data as usual
