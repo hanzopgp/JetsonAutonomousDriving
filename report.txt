@@ -88,5 +88,28 @@ trying with some more complex network:
 ==> Best val loss: 0.000805
 
 gotta try 256 with dropout maybe and more optimization but before lets take some more data
+==> Best val loss: 0.000510
 
-==> Best val loss: 0.000497
+after checking results the only errors the model is making is when the hand is far away
+I will add lot of data only containing small bbox and check new results
+==> Best val loss: 0.000510
+
+adding data from far + adding validation set really different from training set
+now that everything is working lets go back to the beginning
+try to full overfit with a big model size, no dropout, no data augmentation
+==> Best val loss : 0.000069
+we got better performance thanks to the 700 image with only little bbox i've taken
+
+Lets try with some data augmentation:
+==> Best val loss : 
+
+I want to try and even more complex model since it doesn't seem to overfit yet compared to training set (4096 neurons from dam GPU)
+==> Best val loss : 
+
+now we try to regularize using dropout, less complex model, data augmentation, and adding even more data as usual
+==> Best val loss :
+
+
+
+
+try decay at the end ? try MAE ? try data augmentation 
