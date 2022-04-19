@@ -79,6 +79,21 @@ Lets try with some data augmentation:
 Bad idea we desactivate it
 
 I want to try and even more complex model since it doesn't seem to overfit yet compared to training set (4096)
+==> Best val loss : 0.000101
+
+trying with lower learning rate 5e-5 (against 3e-4 previously)
+==> Best val loss : 0.000063
+
+trying with lower learning rate 1e-5 (against 5e-5 previously)
+==> Best val loss : 0.000092
+
+adding more patience for early stopping (50 against 15 previously)
+==> Best val loss : 0.000026
+
+50 patience, 5e-6 lr
+==> Best val loss : 
+
+8192 neurons (RAM go BOOM)
 ==> Best val loss : 
 
 now we try to regularize using dropout, less complex model, data augmentation, and adding even more data as usual
@@ -86,5 +101,5 @@ now we try to regularize using dropout, less complex model, data augmentation, a
 
 
 
-
+maybe test lr_scheduler.StepLR pytorch ?
 try decay at the end ? try MAE ? try data augmentation 
