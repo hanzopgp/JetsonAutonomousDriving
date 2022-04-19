@@ -6,3 +6,4 @@ data/
 *.onnx
 *jpg
 *.zip
+wandb/
