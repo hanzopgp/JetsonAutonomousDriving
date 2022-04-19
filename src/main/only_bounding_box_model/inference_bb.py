@@ -11,7 +11,7 @@ from torch.nn.functional import softmax
 INPUT_SIZE = 400
 N_CLASS = 4
 
-model_path = "models/boundingbox_vgg.pth"
+model_path = "models/boundingbox_vgg_last.pth"
 
 mean=[0.485, 0.456, 0.406]
 std=[0.229, 0.224, 0.225]
@@ -24,16 +24,16 @@ std=[0.229, 0.224, 0.225]
 # model.eval() 
 
 model = models.vgg16(pretrained=True)
-model.classifier = nn.Sequential(nn.Linear(25088, 128), 
+model.classifier = nn.Sequential(nn.Linear(25088, 4096), 
                                nn.ReLU(), 
                             #    nn.Dropout(0.5),        
-                               nn.Linear(128, 64), 
+                               nn.Linear(4096, 1024), 
                                nn.ReLU(), 
 #                                nn.Dropout(0.5),        
-                               nn.Linear(64, 32),
+                               nn.Linear(1024, 256),
                                nn.ReLU(), 
 #                                nn.Dropout(0.5),        
-                               nn.Linear(32, N_CLASS),
+                               nn.Linear(256, N_CLASS),
                                nn.Sigmoid())
 model.load_state_dict(torch.load(os.path.join(model_path), map_location='cpu'))
 model.eval() 

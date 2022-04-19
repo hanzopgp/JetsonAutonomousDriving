@@ -90,8 +90,16 @@ trying with lower learning rate 1e-5 (against 5e-5 previously)
 adding more patience for early stopping (50 against 15 previously)
 ==> Best val loss : 0.000026
 
-15 patience, 5e-6 lr + new data
-==> Best val loss : 
+20 patience, 5e-6 lr + new data
+==> Best val loss: 0.000032
+
+trying to add data augmentation with albumentation
+==> Best val loss : ???
+
+
+
+
+
 
 8192 neurons (RAM go BOOM)
 ==> Best val loss : 
@@ -103,3 +111,30 @@ now we try to regularize using dropout, less complex model, data augmentation, a
 
 maybe test lr_scheduler.StepLR pytorch ?
 try decay at the end ? try MAE ? try data augmentation 
+
+
+
+
+
+
+
+
+
+
+
+
+
+problems :
+
+- what kind of gesture could be nice for our problem (signs must be very different for easier learning)
+- what kind of background / distance etc... to have a nice train set in order to generalize
+- what to use to train multiple model at a time so we don't waste time ?
+- augmentation on train + valid ? augmentation only on train? what kind of augmentation is useful (e.g. color make it generalize but maybe you want to keep the color of the hand ?) ? valid set with backgrounds of photos never seen in train
+
+- what layer to freeze ? (last layers of classifier / all classifier / all classifier + last layers of features)
+- how many neurons on classifier layers ?
+- what model to chose for transfer learning ?
+
+- what to do in inference when there is no hand movement ? NONE class ? sigmoid output activation ?
+- poor performance in inference comparing to validation set
+
