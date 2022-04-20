@@ -115,6 +115,33 @@ try decay at the end ? try MAE ? try data augmentation
 
 
 
+- Intro :
+- on veut controler le robot grace a des mouvements de mains 
+
+- partie 1 : 
+- comment proceder : 1 reseau one for all, 2 reseau bbox+classif, un model d'object detection ?
+- script pour controler le robot, connexion en ssh etc...
+- script utilisant les modeles et liant les modeles aux actuateurs
+
+- partie 2 :
+- on benchmark des modeles sur computer / jetson
+- on test le transfer learning et les modeles custom etc
+- format onnx pour accelere l'inference
+
+- partie 3 :
+- on a besoin de données pour notre problemes
+- les données sont compliqué a trouver
+- scripts pour data acquisition
+- construction de 3 datasets different pour tester les differents modeles choisit
+
+- partie 4 : 
+- choix des modeles performants rentrant dans le benchmark
+- quel modele pour quel fonction
+- regularisation : data augmentation, dropout, complexite du model, ajout de data
+- attention a l'inference : bien choisir validset testset et faire des test en situation reel (webcam)
+- choix des hyper parametres
+
+
 
 
 
