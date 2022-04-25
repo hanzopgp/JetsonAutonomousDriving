@@ -39,7 +39,7 @@ model.load_state_dict(torch.load(os.path.join(model_path), map_location='cpu'))
 model.eval() 
 
 cv2.destroyAllWindows()
-vid = cv2.VideoCapture(1)
+vid = cv2.VideoCapture(0)
 vid.set(cv2.CAP_PROP_FPS, 5)
 
 while True:
