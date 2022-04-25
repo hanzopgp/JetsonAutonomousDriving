@@ -93,13 +93,10 @@ adding more patience for early stopping (50 against 15 previously)
 20 patience, 5e-6 lr + new data
 ==> Best val loss: 0.000032
 
+need to debug or add dropout+complexity
+
 trying to add data augmentation with albumentation
 ==> Best val loss : ???
-
-
-
-
-
 
 8192 neurons (RAM go BOOM)
 ==> Best val loss : 
@@ -107,13 +104,16 @@ trying to add data augmentation with albumentation
 now we try to regularize using dropout, less complex model, data augmentation, and adding even more data as usual
 ==> Best val loss :
 
-
-
 maybe test lr_scheduler.StepLR pytorch ?
 try decay at the end ? try MAE ? try data augmentation 
 
 
 
+ATTENTION A L'ENTREE POOLING ADAPTATIF VGG 400*400
+
+
+
+========================================================= RAPPORT ===============================================================
 
 - Intro :
 - on veut controler le robot grace a des mouvements de mains 
@@ -140,6 +140,40 @@ try decay at the end ? try MAE ? try data augmentation
 - regularisation : data augmentation, dropout, complexite du model, ajout de data
 - attention a l'inference : bien choisir validset testset et faire des test en situation reel (webcam)
 - choix des hyper parametres
+
+MAX 20 pages IMPORTANT DE RACONTER UNE HISTOIRE + FIL CONDUCTEUR
+(montrer l'ampleur du travail experimental que l'on a fait)
+
+introduction : objectif (benchmark jetson, poste des problemes)
+quel type de modele fonctionne en inference embarqué
+quel type de tache on peut faire
+acquisition des données car pas de données dispo
+utilisation de la jetson (connexion ssh...)
+
+partie 1:
+biblio, on parle de ce qui existe deja (traitement d'image opencv)
+biblio, reseau deep, classif segmentation object detection etc
+on s'est concentré sur tel modele
+
+partie 2:
+benchmark sur des dataset comme ciphar, caltech avec different modele
+onnx etc
+pourquoi avoir choisit ces modeles
+limite de la jetson ? (memoire, puissance, fps)
+conclusion : qu'est ce qu'on peut utiliser (classif/bbox etc)
+
+partie 3:
+precision sur notre tache, finetuning, acquisition des données (script reflexion)
+comparatif des differentes approche (one stage two stage classif)
+montrer l'experimental
+probleme de transfer, de generalisation, d'inference
+
+conclusion:
+ca marche ou pas, ameliorations possible etc
+
+
+
+
 
 
 
