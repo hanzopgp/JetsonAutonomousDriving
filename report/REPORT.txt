@@ -95,6 +95,14 @@ adding more patience for early stopping (50 against 15 previously)
 
 need to debug or add dropout+complexity
 
+
+
+
+
+
+
+
+
 trying to add data augmentation with albumentation
 ==> Best val loss : ???
 
